@@ -1,0 +1,64 @@
+[
+
+    {
+        "name": "SQL",
+        "icon": "https://img.icons8.com/?size=100&id=QSjnrUKYMnxO&format=png&color=000000"
+    },
+    {
+        "name": "PYTHON",
+        "icon": "https://img.icons8.com/?size=100&id=l75OEUJkPAk4&format=png&color=000000"
+    },
+    {
+        "name": "TABLEU",
+        "icon": "https://img.icons8.com/?size=100&id=9Kvi1p1F0tUo&format=png&color=000000"
+    },
+    {
+        "name": "MATPLOTIB",
+        "icon": "https://img.icons8.com/?size=100&id=12818&format=png&color=000000"
+    },
+    {
+        "name": "POWER BI",
+        "icon": "https://img.icons8.com/?size=100&id=70667&format=png&color=000000"
+    },
+    {
+        "name": "EXCEL",
+        "icon": "https://img.icons8.com/?size=100&id=UECmBSgBOvPT&format=png&color=000000"
+    },
+    {
+        "name": "MYSQL",
+        "icon": "https://img.icons8.com/?size=100&id=6X0_MfxrYEea&format=png&color=000000"
+    },
+    {
+        "name": "PostgreSQL",
+        "icon": "https://img.icons8.com/?size=100&id=38561&format=png&color=000000"
+    },
+    {
+        "name": "Google Analytics",
+        "icon": "https://img.icons8.com/?size=100&id=fcKpGwAbxxfP&format=png&color=000000"
+    },
+    {
+        "name": "SEABORN",
+        "icon": "https://img.icons8.com/?size=100&id=41833&format=png&color=000000"
+    },
+    {
+        "name": "Jupyter",
+        "icon": "https://img.icons8.com/?size=100&id=J0SgMWzAxqFj&format=png&color=000000"
+    },
+    {
+        "name": "GIT",
+        "icon": "https://img.icons8.com/?size=100&id=xBKl2pdJg5kk&format=png&color=000000"
+    },
+    {
+        "name": "R",
+        "icon": "https://img.icons8.com/?size=100&id=QemG6zV0OIia&format=png&color=000000"
+    },
+    {
+        "name": "ODOO",
+        "icon": "https://odoocdn.com/openerp_website/static/src/img/assets/png/odoo_logo_small.png"
+    },
+     {
+        "name": "Colab",
+        "icon": "https://img.icons8.com/?size=100&id=lOqoeP2Zy02f&format=png&color=000000"
+    }
+   
+]
