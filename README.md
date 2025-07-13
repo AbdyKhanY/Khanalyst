@@ -1,7 +1,7 @@
 ## Portfolio-Website
 Portfolio website built using HTML5, CSS3, JavaScript, and jQuery.
 
-<a href="https://abdullahikulei.netlify.app//" target="_blank">**Visit Now** 🚀</a>
+<a href="https://abdykhany.github.io/Khanalyst/" target="_blank">**Visit Now** 🚀</a>
 
 
 ## 📌 Tech Stack
@@ -22,6 +22,5 @@ Particle.js, Typed.js, Tilt.js, Scroll Reveal, Tawk.to, Font Awesome and JSON
 
 Feel free to reach me through the below handles if you'd like to contact me.
 
-[![linkedin](https://img.shields.io/badge/https://www.linkedin.com/in/abdullahi-kulei-7859b2292/)](https://www.linkedin.com/in/abdullahi-kulei-7859b2292/)
-[![instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&l)](https://www.instagram.com/a_b_dllahi/?hl=en)
+[![linkedin](https://img.shields.io/badge/https://www.linkedin.com/in/abdikhani-mohamed-7859b2292/)](https://www.linkedin.com/in/abdulleabdigani)
 
