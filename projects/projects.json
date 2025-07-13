@@ -2,7 +2,7 @@
 {
   "name": "HEART DISEASE PREDICTION",
   "desc": "Developed a predictive model to assess the likelihood of cardiovascular disease using machine learning techniques",
-  "image": "https://raw.githubusercontent.com/AbdyKhanY/Khanalyst/refs/heads/main/assets/images/projects/Heart.png",
+  "image": "https://raw.githubusercontent.com/AbdyKhanY/Khanalyst/main/assets/images/projects/Heart.png",
   "category": "projects",
   "links": {
     "view": "https://khanweb.streamlit.app/",
