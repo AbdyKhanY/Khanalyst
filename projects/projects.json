@@ -1,5 +1,15 @@
 [
 {
+  "name": "GYM TRACKER",
+  "desc": "GymTracker replaces biometric systems with secure QR-based access, requiring only a smartphone and Google Workspace.",
+  "image": "heart",
+  "category": "projects",
+  "links": {
+    "view": "https://khanweb.streamlit.app/",
+    "code": "https://colab.research.google.com/drive/15ZksA_y0wL12ilWBvb0M9XxjrwaL-TS-?usp=sharing"
+  }
+},
+{
   "name": "HEART DISEASE PREDICTION",
   "desc": "Developed a predictive model to assess the likelihood of cardiovascular disease using machine learning techniques",
   "image": "heart",
@@ -60,4 +70,5 @@
   }
 }
 ]
+
 
