@@ -42,6 +42,7 @@ function getProjects() {
 
 
 function showProjects(projects) {
+    alert("showProjects is running");
   const projectsContainer = document.querySelector(".work .box-container");
   let projectsHTML = "";
 
@@ -168,6 +169,7 @@ document.onkeydown = function (e) {
         return false;
     }
 }
+
 
 
 
