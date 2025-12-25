@@ -49,16 +49,19 @@ function showProjects(projects) {
 
     let buttonsHTML = "";
 
-    if (project.type === "gym-tracker") {
+    // If project has Read + View (Gym Tracker case)
+    if (project.links.Read && project.links.View) {
       buttonsHTML = `
-        <a href="${project.links.read}" class="btn" target="_blank">
+        <a href="${project.links.Read}" class="btn" target="_blank">
           <i class="fas fa-file-alt"></i> Read
         </a>
-        <a href="${project.links.view}" class="btn" target="_blank">
-          <i class="fas fa-images"></i> View
+        <a href="${project.links.View}" class="btn" target="_blank">
+          <i class="fas fa-eye"></i> View
         </a>
       `;
-    } else {
+    } 
+    // Default projects (View + Code)
+    else {
       buttonsHTML = `
         <a href="${project.links.view}" class="btn" target="_blank">
           <i class="fas fa-eye"></i> View
@@ -90,6 +93,7 @@ function showProjects(projects) {
 
   projectsContainer.innerHTML = projectsHTML;
 }
+
 
     // vanilla tilt.js
     // VanillaTilt.init(document.querySelectorAll(".tilt"), {
@@ -162,6 +166,7 @@ document.onkeydown = function (e) {
         return false;
     }
 }
+
 
 
 
