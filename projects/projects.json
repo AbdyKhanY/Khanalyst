@@ -22,7 +22,7 @@
 {
   "name": "BREAST CANCER DETECTION",
   "desc": "Developed a machine learning model to predict breast cancer disease onset using patient data",
-  "image": "./assets/images/image.png",
+  "image": "Breast Cancer",
   "category": "projects",
   "links": {
     "view": "https://colab.research.google.com/drive/1r878RzR4SXtjSTZcUMAjZ3GFmNnTzmlt?usp=sharing",
@@ -60,6 +60,7 @@
   }
 }
 ]
+
 
 
 
