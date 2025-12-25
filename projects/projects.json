@@ -5,7 +5,7 @@
   "image": "gym",
   "category": "projects",
   "links": {
-    "Read": "https://drive.google.com/file/d/1eLSs_QYciEa50_7qDQiKbT2-3afxAARq/view?usp=sharing",
+    "View": "https://drive.google.com/file/d/1eLSs_QYciEa50_7qDQiKbT2-3afxAARq/view?usp=sharing",
     "Product": "https://colab.research.google.com/drive/15ZksA_y0wL12ilWBvb0M9XxjrwaL-TS-?usp=sharing"
   }
 },
@@ -70,6 +70,7 @@
   }
 }
 ]
+
 
 
 
