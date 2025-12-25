@@ -42,15 +42,15 @@ function getProjects() {
 
 
 function showProjects(projects) {
-  let projectsContainer = document.querySelector(".work .box-container");
+  const projectsContainer = document.querySelector(".work .box-container");
   let projectsHTML = "";
 
   projects.forEach(project => {
 
     let buttonsHTML = "";
 
-    // CASE 1: Gym Tracker (Read + View)
-    if (project.links && project.links.Read && project.links.View) {
+    // 🔴 Detect GYM TRACKER (NAME IS IN CAPS)
+    if (project.name === "GYM TRACKER") {
       buttonsHTML = `
         <a href="${project.links.Read}" class="btn" target="_blank">
           <i class="fas fa-file-alt"></i> Read
@@ -59,8 +59,8 @@ function showProjects(projects) {
           <i class="fas fa-eye"></i> View
         </a>
       `;
-    }
-    // CASE 2: Normal projects (view + code)
+    } 
+    // 🟢 All other projects
     else {
       buttonsHTML = `
         <a href="${project.links.view}" class="btn" target="_blank">
@@ -93,6 +93,7 @@ function showProjects(projects) {
 
   projectsContainer.innerHTML = projectsHTML;
 }
+
 
 
 
@@ -167,6 +168,7 @@ document.onkeydown = function (e) {
         return false;
     }
 }
+
 
 
 
