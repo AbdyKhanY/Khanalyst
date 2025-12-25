@@ -2,7 +2,7 @@
 {
   "name": "GYM TRACKER",
   "desc": "GymTracker replaces biometric systems with secure QR-based access, requiring only a smartphone and Google Workspace.",
-  "image": "heart",
+  "image": "gym",
   "category": "projects",
   "links": {
     "view": "https://khanweb.streamlit.app/",
@@ -70,5 +70,6 @@
   }
 }
 ]
+
 
 
