@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    // Navbar toggle
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
@@ -17,115 +17,84 @@ $(document).ready(function () {
     });
 });
 
-document.addEventListener('visibilitychange',
-    function () {
-        if (document.visibilityState === "visible") {
-            document.title = "Projects | Portfolio Abdigani Mohamed";
-            $("#favicon").attr("href", "/assets/images/favicon.png");
-        }
-        else {
-            document.title = "Come Back To Portfolio";
-            $("#favicon").attr("href", "/assets/images/favhand.png");
-        }
-    });
+// Change page title and favicon on tab visibility
+document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === "visible") {
+        document.title = "Projects | Portfolio Abdikhani Mohamed";
+        $("#favicon").attr("href", "/assets/images/favicon.png");
+    } else {
+        document.title = "Come Back To Portfolio";
+        $("#favicon").attr("href", "/assets/images/favhand.png");
+    }
+});
 
-
-// fetch projects start
+// Fetch projects
 function getProjects() {
     return fetch("./projects.json")
         .then(response => response.json())
-        .then(data => {
-            return data
-        });
+        .then(data => data);
 }
 
-
-
+// Display projects dynamically
 function showProjects(projects) {
-    alert("showProjects is running");
-  const projectsContainer = document.querySelector(".work .box-container");
-  let projectsHTML = "";
+    const projectsContainer = document.querySelector(".work .box-container");
+    let projectsHTML = "";
 
-  projects.forEach(project => {
+    projects.forEach(project => {
+        let buttonsHTML = "";
 
-    let buttonsHTML = "";
+        // Iterate over project.links and generate buttons dynamically
+        for (const [label, url] of Object.entries(project.links)) {
+            // Capitalize first letter of label
+            let displayLabel = label.charAt(0).toUpperCase() + label.slice(1);
 
-    // 🔴 Detect GYM TRACKER (NAME IS IN CAPS)
-    if (project.name === "GYM TRACKER") {
-      buttonsHTML = `
-        <a href="${project.links.Read}" class="btn" target="_blank">
-          <i class="fas fa-file-alt"></i> Read
-        </a>
-        <a href="${project.links.View}" class="btn" target="_blank">
-          <i class="fas fa-eye"></i> View
-        </a>
-      `;
-    } 
-    // 🟢 All other projects
-    else {
-      buttonsHTML = `
-        <a href="${project.links.view}" class="btn" target="_blank">
-          <i class="fas fa-eye"></i> View
-        </a>
-        <a href="${project.links.code}" class="btn" target="_blank">
-          code <i class="fas fa-code"></i>
-        </a>
-      `;
-    }
+            // Choose icon based on label (you can customize)
+            let icon = "fas fa-link"; // default icon
+            if (displayLabel.toLowerCase() === "view") icon = "fas fa-eye";
+            if (displayLabel.toLowerCase() === "code") icon = "fas fa-code";
+            if (displayLabel.toLowerCase() === "read") icon = "fas fa-file-alt";
 
-    projectsHTML += `
-      <div class="grid-item ${project.category}">
-        <div class="box tilt" style="width: 380px; margin: 1rem">
-          <img draggable="false" src="assets/images/projects/${project.image}.png" alt="project" />
-          <div class="content">
-            <div class="tag">
-              <h3>${project.name}</h3>
+            buttonsHTML += `
+                <a href="${url}" class="btn" target="_blank">
+                    <i class="${icon}"></i> ${displayLabel}
+                </a>
+            `;
+        }
+
+        projectsHTML += `
+        <div class="grid-item ${project.category}">
+            <div class="box tilt" style="width: 380px; margin: 1rem">
+                <img draggable="false" src="assets/images/projects/${project.image}.png" alt="project" />
+                <div class="content">
+                    <div class="tag">
+                        <h3>${project.name}</h3>
+                    </div>
+                    <div class="desc">
+                        <p>${project.desc}</p>
+                        <div class="btns">
+                            ${buttonsHTML}
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="desc">
-              <p>${project.desc}</p>
-              <div class="btns">
-                ${buttonsHTML}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>`;
-  });
+        </div>`;
+    });
 
-  projectsContainer.innerHTML = projectsHTML;
-}
+    projectsContainer.innerHTML = projectsHTML;
 
+    // Initialize tilt
+    VanillaTilt.init(document.querySelectorAll(".tilt"), {
+        max: 20,
+    });
 
-
-
-    // vanilla tilt.js
-    // VanillaTilt.init(document.querySelectorAll(".tilt"), {
-    //     max: 20,
-    // });
-    // // vanilla tilt.js  
-
-    // /* ===== SCROLL REVEAL ANIMATION ===== */
-    // const srtop = ScrollReveal({
-    //     origin: 'bottom',
-    //     distance: '80px',
-    //     duration: 1000,
-    //     reset: true
-    // });
-
-    // /* SCROLL PROJECTS */
-    // srtop.reveal('.work .box', { interval: 200 });
-
-    // isotope filter products
+    // Initialize isotope
     var $grid = $('.box-container').isotope({
         itemSelector: '.grid-item',
         layoutMode: 'fitRows',
-        masonry: {
-            columnWidth: 200
-        }
+        masonry: { columnWidth: 200 }
     });
-   
 
-    // filter items on button click
+    // Filter buttons
     $('.button-group').on('click', 'button', function () {
         $('.button-group').find('.is-checked').removeClass('is-checked');
         $(this).addClass('is-checked');
@@ -134,48 +103,14 @@ function showProjects(projects) {
     });
 }
 
-getProjects().then(data => {
-    showProjects(data);
-})
-// fetch projects end
+// Load projects
+getProjects().then(data => showProjects(data));
 
-// Start of Tawk.to Live Chat
-var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-(function () {
-    var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-    s1.async = true;
-    s1.src = 'https://embed.tawk.to/60df10bf7f4b000ac03ab6a8/1f9jlirg6';
-    s1.charset = 'UTF-8';
-    s1.setAttribute('crossorigin', '*');
-    s0.parentNode.insertBefore(s1, s0);
-})();
-// End of Tawk.to Live Chat
-
-// disable developer mode
+// Disable developer tools
 document.onkeydown = function (e) {
-    if (e.keyCode == 123) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-        return false;
-    }
-    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-        return false;
-    }
-}
-
-
-
-
-
-
-
-
-
-
+    if (e.keyCode == 123) return false; // F12
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
+    if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+    if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+};
