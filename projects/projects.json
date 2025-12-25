@@ -1,6 +1,6 @@
 [
 {
-  "name": "GYM TRACKER",
+  "name": "GYM ACCESS TRACKER",
   "desc": "GymTracker replaces biometric systems with secure QR-based access, requiring only a smartphone and Google Workspace.",
   "image": "gym",
   "category": "projects",
@@ -70,6 +70,7 @@
   }
 }
 ]
+
 
 
 
