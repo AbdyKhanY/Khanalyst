@@ -20,7 +20,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Projects | Portfolio Dr. Jamal Abade";
+            document.title = "Projects | Portfolio Abdigani Mohamed";
             $("#favicon").attr("href", "/assets/images/favicon.png");
         }
         else {
@@ -136,6 +136,7 @@ document.onkeydown = function (e) {
         return false;
     }
 }
+
 
 
 
