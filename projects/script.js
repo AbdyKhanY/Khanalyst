@@ -49,8 +49,8 @@ function showProjects(projects) {
 
     let buttonsHTML = "";
 
-    // If project has Read + View (Gym Tracker case)
-    if (project.links.Read && project.links.View) {
+    // CASE 1: Gym Tracker (Read + View)
+    if (project.links && project.links.Read && project.links.View) {
       buttonsHTML = `
         <a href="${project.links.Read}" class="btn" target="_blank">
           <i class="fas fa-file-alt"></i> Read
@@ -59,8 +59,8 @@ function showProjects(projects) {
           <i class="fas fa-eye"></i> View
         </a>
       `;
-    } 
-    // Default projects (View + Code)
+    }
+    // CASE 2: Normal projects (view + code)
     else {
       buttonsHTML = `
         <a href="${project.links.view}" class="btn" target="_blank">
@@ -93,6 +93,7 @@ function showProjects(projects) {
 
   projectsContainer.innerHTML = projectsHTML;
 }
+
 
 
     // vanilla tilt.js
@@ -166,6 +167,7 @@ document.onkeydown = function (e) {
         return false;
     }
 }
+
 
 
 
