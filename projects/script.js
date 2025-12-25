@@ -40,30 +40,56 @@ function getProjects() {
 }
 
 
+
 function showProjects(projects) {
-    let projectsContainer = document.querySelector(".work .box-container");
-    let projectsHTML = "";
-    projects.forEach(project => {
-        projectsHTML += `
-        <div class="grid-item ${project.category}">
+  let projectsContainer = document.querySelector(".work .box-container");
+  let projectsHTML = "";
+
+  projects.forEach(project => {
+
+    let buttonsHTML = "";
+
+    if (project.type === "gym-tracker") {
+      buttonsHTML = `
+        <a href="${project.links.read}" class="btn" target="_blank">
+          <i class="fas fa-file-alt"></i> Read
+        </a>
+        <a href="${project.links.view}" class="btn" target="_blank">
+          <i class="fas fa-images"></i> View
+        </a>
+      `;
+    } else {
+      buttonsHTML = `
+        <a href="${project.links.view}" class="btn" target="_blank">
+          <i class="fas fa-eye"></i> View
+        </a>
+        <a href="${project.links.code}" class="btn" target="_blank">
+          code <i class="fas fa-code"></i>
+        </a>
+      `;
+    }
+
+    projectsHTML += `
+      <div class="grid-item ${project.category}">
         <div class="box tilt" style="width: 380px; margin: 1rem">
-      <img draggable="false" src="assets/images/projects/${project.image}.png" alt="project" />
-      <div class="content">
-        <div class="tag">
-        <h3>${project.name}</h3>
-        </div>
-        <div class="desc">
-          <p>${project.desc}</p>
-          <div class="btns">
-            <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">code <i class="fas fa-code"></i></a>
+          <img draggable="false" src="assets/images/projects/${project.image}.png" alt="project" />
+          <div class="content">
+            <div class="tag">
+              <h3>${project.name}</h3>
+            </div>
+            <div class="desc">
+              <p>${project.desc}</p>
+              <div class="btns">
+                ${buttonsHTML}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    </div>`
-    });
-    projectsContainer.innerHTML = projectsHTML;
+      </div>`;
+  });
+
+  projectsContainer.innerHTML = projectsHTML;
+}
 
     // vanilla tilt.js
     // VanillaTilt.init(document.querySelectorAll(".tilt"), {
@@ -136,6 +162,7 @@ document.onkeydown = function (e) {
         return false;
     }
 }
+
 
 
 
