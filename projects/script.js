@@ -43,22 +43,24 @@ function showProjects(projects) {
     projects.forEach(project => {
         let buttonsHTML = "";
 
-        // Iterate over project.links and generate buttons dynamically
-        for (const [label, url] of Object.entries(project.links)) {
-            // Capitalize first letter of label
-            let displayLabel = label.charAt(0).toUpperCase() + label.slice(1);
+        // Iterate over all keys in project.links
+        for (let key in project.links) {
+            if (project.links.hasOwnProperty(key)) {
+                let label = key; // Use key as button label
+                let url = project.links[key];
 
-            // Choose icon based on label (you can customize)
-            let icon = "fas fa-link"; // default icon
-            if (displayLabel.toLowerCase() === "view") icon = "fas fa-eye";
-            if (displayLabel.toLowerCase() === "code") icon = "fas fa-code";
-            if (displayLabel.toLowerCase() === "read") icon = "fas fa-file-alt";
+                // Assign icons based on key
+                let icon = "fas fa-link";
+                if (label.toLowerCase() === "view") icon = "fas fa-eye";
+                if (label.toLowerCase() === "code") icon = "fas fa-code";
+                if (label.toLowerCase() === "read") icon = "fas fa-file-alt";
 
-            buttonsHTML += `
-                <a href="${url}" class="btn" target="_blank">
-                    <i class="${icon}"></i> ${displayLabel}
-                </a>
-            `;
+                buttonsHTML += `
+                    <a href="${url}" class="btn" target="_blank">
+                        <i class="${icon}"></i> ${label}
+                    </a>
+                `;
+            }
         }
 
         projectsHTML += `
@@ -66,9 +68,7 @@ function showProjects(projects) {
             <div class="box tilt" style="width: 380px; margin: 1rem">
                 <img draggable="false" src="assets/images/projects/${project.image}.png" alt="project" />
                 <div class="content">
-                    <div class="tag">
-                        <h3>${project.name}</h3>
-                    </div>
+                    <div class="tag"><h3>${project.name}</h3></div>
                     <div class="desc">
                         <p>${project.desc}</p>
                         <div class="btns">
@@ -82,19 +82,15 @@ function showProjects(projects) {
 
     projectsContainer.innerHTML = projectsHTML;
 
-    // Initialize tilt
-    VanillaTilt.init(document.querySelectorAll(".tilt"), {
-        max: 20,
-    });
+    // Reinitialize tilt.js
+    VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 20 });
 
-    // Initialize isotope
+    // Reinitialize isotope
     var $grid = $('.box-container').isotope({
         itemSelector: '.grid-item',
-        layoutMode: 'fitRows',
-        masonry: { columnWidth: 200 }
+        layoutMode: 'fitRows'
     });
 
-    // Filter buttons
     $('.button-group').on('click', 'button', function () {
         $('.button-group').find('.is-checked').removeClass('is-checked');
         $(this).addClass('is-checked');
@@ -114,3 +110,4 @@ document.onkeydown = function (e) {
     if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
 };
+
