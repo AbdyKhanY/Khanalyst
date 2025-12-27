@@ -25,10 +25,6 @@ body{
   color: #fff;
 }
 
-html{
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
 html::-webkit-scrollbar{
   width: .8rem;
 }
@@ -99,15 +95,14 @@ header .navbar ul li a:hover{
   border-bottom: .2rem solid #011aff;
   padding: .5rem 0;
 }
-/* navbar ends */
 
-/* hamburger icon starts*/
 #menu{
   font-size: 3rem;
   cursor: pointer;
   color: rgb(24, 2, 63);
   display: none;
 }
+
 @media(max-width:768px){
   #menu{
       display: block;
@@ -153,11 +148,9 @@ header .navbar ul li a:hover{
     right: 0;
   }
 }
-/* hamburger icon ends */
 
 /* work section starts */
 .work{
-  /* background: #010124; */
   background: linear-gradient(to bottom, #010136, #00003a);
   margin-top: 5rem;
 }
@@ -187,19 +180,17 @@ header .navbar ul li a:hover{
   cursor: pointer;
   font-weight: 500;
 }
-.work .button-group .btn:hover{
+.work .button-group .btn:hover, .work .button-group .btn.is-checked{
   background-color: #fff;
   color: #000;
 }
-.work .button-group .btn.is-checked{
-  background-color: #fff;
-  color: #000;
-}
+
 .work .box-container{
   display: flex;
   flex-wrap: wrap;
   gap:1.5rem;
   margin: 2rem;
+  justify-content: center;
 }
 .work .box-container .box{
   flex:1 1 30rem;
@@ -242,29 +233,36 @@ header .navbar ul li a:hover{
   top: 25%;
 }
 .work .desc {
-  margin: 2rem;
+  margin: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  height: 100%;
 }
 .work .desc p{
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 1.5;
 }
+
+/* BUTTONS UPDATE: This fix handles 2 or 3 buttons */
 .work .desc .btns{
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allows wrapping */
+  gap: 1rem;      /* Even spacing between buttons */
   width: 100%;
-  margin-top: 2rem;
+  margin-top: auto; /* Pushes buttons to bottom */
+  padding-bottom: 2rem;
 }
 .work .desc .btns .btn{
-  line-height: 0;
-  display: inline;
-  padding: 1.5rem 2.5rem;
+  flex: 1;         /* Makes buttons equal width */
+  text-align: center;
+  padding: 1rem;
   border-radius: .5rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #fff;
   background: rgb(12, 12, 12);
-  margin-right: 2rem;
+  white-space: nowrap;
 }
 .work .desc .btns .btn:hover{
   background: #310ae0f5;
@@ -282,7 +280,6 @@ header .navbar ul li a:hover{
   }
 }
 
-/* back to home button */
 .backbtn{
   display: flex;
   justify-content: center;
@@ -317,24 +314,16 @@ header .navbar ul li a:hover{
 .backbtn .btn:hover i {
   transform: translateX(-8px);
 }
-/* work section ends */
 
-/* common media queries starts*/
 @media(max-width:450px){
   html{
     font-size: 55%;
-  }
-  body{
-    padding-right: 0;
   }
   section{
     padding: 2rem;
   }
 }
-/* common media queries ends*/
 
-
-/* scroll top starts */
 #scroll-top{
   position: fixed;
   top: -140%;
@@ -350,4 +339,3 @@ header .navbar ul li a:hover{
 #scroll-top.active{
   top: calc(100% - 12rem);
 }
-/* scroll top ends */
