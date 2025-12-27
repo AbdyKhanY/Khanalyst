@@ -43,23 +43,27 @@ function showProjects(projects) {
     projects.forEach(project => {
         let buttonsHTML = "";
 
-        // Iterate over all keys in project.links
-        for (let key in project.links) {
-            if (project.links.hasOwnProperty(key)) {
-                let label = key; // Use key as button label
-                let url = project.links[key];
+        // Check if links exist to avoid errors
+        if (project.links) {
+            for (let key in project.links) {
+                if (project.links.hasOwnProperty(key)) {
+                    let label = key; 
+                    let url = project.links[key];
 
-                // Assign icons based on key
-                let icon = "fas fa-link";
-                if (label.toLowerCase() === "view") icon = "fas fa-eye";
-                if (label.toLowerCase() === "code") icon = "fas fa-code";
-                if (label.toLowerCase() === "read") icon = "fas fa-file-alt";
+                    // assign icons based on key
+                    let icon = "fas fa-link";
+                    const lowerLabel = label.toLowerCase();
+                    
+                    if (lowerLabel === "view") icon = "fas fa-eye";
+                    if (lowerLabel === "code") icon = "fas fa-code";
+                    if (lowerLabel === "read") icon = "fas fa-file-alt"; // Icon for summary
 
-                buttonsHTML += `
-                    <a href="${url}" class="btn" target="_blank">
-                        <i class="${icon}"></i> ${label}
-                    </a>
-                `;
+                    buttonsHTML += `
+                        <a href="${url}" class="btn" target="_blank">
+                            <i class="${icon}"></i> ${label}
+                        </a>
+                    `;
+                }
             }
         }
 
@@ -81,8 +85,9 @@ function showProjects(projects) {
     });
 
     projectsContainer.innerHTML = projectsHTML;
-
-    // Reinitialize tilt.js
+    // ... rest of your Isotope and Tilt code
+}
+// Reinitialize tilt.js
     VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 20 });
 
     // Reinitialize isotope
@@ -110,4 +115,5 @@ document.onkeydown = function (e) {
     if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
 };
+
 
