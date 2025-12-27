@@ -21,15 +21,16 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange', function () {
     if (document.visibilityState === "visible") {
         document.title = "Projects | Portfolio Abdikhani Mohamed";
-        $("#favicon").attr("href", "/assets/images/favicon.png");
+        $("#favicon").attr("href", "../assets/images/favicon.png");
     } else {
         document.title = "Come Back To Portfolio";
-        $("#favicon").attr("href", "/assets/images/favhand.png");
+        $("#favicon").attr("href", "../assets/images/favhand.png");
     }
 });
 
 // Fetch projects
 async function getProjects() {
+    // Standardized fetch
     const response = await fetch("./projects.json");
     const data = await response.json();
     return data;
@@ -43,21 +44,19 @@ function showProjects(projects) {
     projects.forEach(project => {
         let buttonsHTML = "";
 
-        // Iterate over all keys in project.links (View, Code, Read, etc.)
+        // Loop through the links object in your JSON
         for (let key in project.links) {
             if (project.links.hasOwnProperty(key)) {
                 let label = key; 
                 let url = project.links[key];
-
-                // Data Engineer approach: Map keys to specific icons
-                let icon = "fas fa-link"; // Default icon
+                let icon = "fas fa-link"; 
                 const lowerLabel = label.toLowerCase();
 
+                // Logic for different button types
                 if (lowerLabel === "view") icon = "fas fa-eye";
                 if (lowerLabel === "code") icon = "fas fa-code";
                 if (lowerLabel === "read" || lowerLabel === "product") icon = "fas fa-file-alt";
 
-                // We add a specific class based on the label (e.g., btn-read) for custom styling later
                 buttonsHTML += `
                     <a href="${url}" class="btn btn-${lowerLabel}" target="_blank">
                         <i class="${icon}"></i> ${label}
@@ -66,10 +65,12 @@ function showProjects(projects) {
             }
         }
 
+        // BUILDING THE HTML BLOCK
+        // Note the image path: added ../ to reach the root assets folder
         projectsHTML += `
         <div class="grid-item ${project.category}">
             <div class="box tilt" style="width: 380px; margin: 1rem">
-                <img draggable="false" src="assets/images/projects/${project.image}.png" alt="project" />
+                <img draggable="false" src="../assets/images/projects/${project.image}.png" alt="project" />
                 <div class="content">
                     <div class="tag"><h3>${project.name}</h3></div>
                     <div class="desc">
@@ -85,12 +86,11 @@ function showProjects(projects) {
 
     projectsContainer.innerHTML = projectsHTML;
 
-    // Reinitialize tilt.js
+    // RE-INITIALIZE LIBRARIES AFTER CONTENT LOADS
     if (typeof VanillaTilt !== 'undefined') {
         VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 20 });
     }
 
-    // Reinitialize isotope
     var $grid = $('.box-container').isotope({
         itemSelector: '.grid-item',
         layoutMode: 'fitRows'
@@ -104,12 +104,12 @@ function showProjects(projects) {
     });
 }
 
-// Load projects
+// EXECUTE LOAD
 getProjects().then(data => {
     showProjects(data);
 });
 
-// Disable developer tools (Keep this if you prefer, though usually not recommended for UX)
+// DISABLE DEV TOOLS
 document.onkeydown = function (e) {
     if (e.keyCode == 123) return false; 
     if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
