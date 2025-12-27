@@ -1,14 +1,14 @@
 [
-{
-  "name": "GYM TRACKER",
-  "desc": "GymTracker replaces biometric systems with secure QR-based access, requiring only a smartphone and Google Workspace.",
-  "image": "gym",
-  "category": "projects",
-  "links": {
-    "View": "https://drive.google.com/file/d/1eLSs_QYciEa50_7qDQiKbT2-3afxAARq/view?usp=sharing",
-    "Product": "https://colab.research.google.com/drive/15ZksA_y0wL12ilWBvb0M9XxjrwaL-TS-?usp=sharing"
-  }
-},
+  {
+    "name": "GYM TRACKER",
+    "desc": "GymTracker replaces biometric systems with secure QR-based access, requiring only a smartphone and Google Workspace.",
+    "image": "gym",
+    "category": "projects",
+    "links": {
+      "View": "https://drive.google.com/file/d/1eLSs_QYciEa50_7qDQiKbT2-3afxAARq/view?usp=sharing",
+      "Read": "https://colab.research.google.com/drive/15ZksA_y0wL12ilWBvb0M9XxjrwaL-TS-?usp=sharing"
+    }
+  },
 {
   "name": "HEART DISEASE PREDICTION",
   "desc": "Developed a predictive model to assess the likelihood of cardiovascular disease using machine learning techniques",
@@ -70,6 +70,7 @@
   }
 }
 ]
+
 
 
 
