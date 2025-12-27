@@ -9,73 +9,64 @@
       "Read": "https://colab.research.google.com/drive/15ZksA_y0wL12ilWBvb0M9XxjrwaL-TS-?usp=sharing"
     }
   },
-{
-  "name": "HEART DISEASE PREDICTION",
-  "desc": "Developed a predictive model to assess the likelihood of cardiovascular disease using machine learning techniques",
-  "image": "heart",
-  "category": "projects",
-  "links": {
-    "view": "https://khanweb.streamlit.app/",
-    "code": "https://colab.research.google.com/drive/15ZksA_y0wL12ilWBvb0M9XxjrwaL-TS-?usp=sharing"
-  }
-},
-{
-  "name": "CYCLIST PROJECT",
-  "desc": "How does a bike-share navigate speedy sucess?",
-  "image": "cyclist",
-  "category": "projects",
-  "links": {
-    "view": "https://docs.google.com/presentation/d/e/2PACX-1vS6ZBzPPYA8PiFFm29nJYcDRRgU60vZ7TNVest3IlTWrx30P_QArsfiqaedc5_hTw/pub?start=true&loop=true&delayms=3000&slide=id.p7",
-    "code": "https://docs.google.com/presentation/d/e/2PACX-1vS6ZBzPPYA8PiFFm29nJYcDRRgU60vZ7TNVest3IlTWrx30P_QArsfiqaedc5_hTw/pub?start=true&loop=true&delayms=3000&slide=id.p7"
-  }
-},
-{
-  "name": "BREAST CANCER DETECTION",
-  "desc": "Developed a machine learning model to predict breast cancer disease onset using patient data",
-  "image": "Breast Cancer",
-  "category": "projects",
-  "links": {
-    "view": "https://colab.research.google.com/drive/1r878RzR4SXtjSTZcUMAjZ3GFmNnTzmlt?usp=sharing",
-    "code": "https://colab.research.google.com/drive/1r878RzR4SXtjSTZcUMAjZ3GFmNnTzmlt?usp=sharing"
-  }
-},
-{
+  {
+    "name": "HEART DISEASE PREDICTION",
+    "desc": "Developed a predictive model to assess the likelihood of cardiovascular disease using machine learning techniques",
+    "image": "heart",
+    "category": "projects",
+    "links": {
+      "View": "https://khanweb.streamlit.app/",
+      "Code": "https://colab.research.google.com/drive/15ZksA_y0wL12ilWBvb0M9XxjrwaL-TS-?usp=sharing"
+    }
+  },
+  {
+    "name": "CYCLIST PROJECT",
+    "desc": "How does a bike-share navigate speedy sucess?",
+    "image": "cyclist",
+    "category": "projects",
+    "links": {
+      "View": "https://docs.google.com/presentation/d/e/2PACX-1vS6ZBzPPYA8PiFFm29nJYcDRRgU60vZ7TNVest3IlTWrx30P_QArsfiqaedc5_hTw/pub?start=true&loop=true&delayms=3000&slide=id.p7",
+      "Code": "https://docs.google.com/presentation/d/e/2PACX-1vS6ZBzPPYA8PiFFm29nJYcDRRgU60vZ7TNVest3IlTWrx30P_QArsfiqaedc5_hTw/pub?start=true&loop=true&delayms=3000&slide=id.p7"
+    }
+  },
+  {
+    "name": "BREAST CANCER DETECTION",
+    "desc": "Developed a machine learning model to predict breast cancer disease onset using patient data",
+    "image": "Breast Cancer",
+    "category": "projects",
+    "links": {
+      "View": "https://colab.research.google.com/drive/1r878RzR4SXtjSTZcUMAjZ3GFmNnTzmlt?usp=sharing",
+      "Code": "https://colab.research.google.com/drive/1r878RzR4SXtjSTZcUMAjZ3GFmNnTzmlt?usp=sharing"
+    }
+  },
+  {
     "name": "UNBILLED WORKORDER TRACKER",
     "desc": "Built a Power BI dashboard to track unbilled work orders, recovering $100K+ in missed revenue across teams and sites.",
     "image": "Cert",
     "category": "projects",
     "links": {
-      "view": "https://drive.google.com/file/d/1or8uSLqdzCKAC8dRJxrw5NhrRKxNA70z/view?usp=sharing",
-      "code": "https://drive.google.com/file/d/1or8uSLqdzCKAC8dRJxrw5NhrRKxNA70z/view?usp=sharing"
+      "View": "https://drive.google.com/file/d/1or8uSLqdzCKAC8dRJxrw5NhrRKxNA70z/view?usp=sharing",
+      "Code": "https://drive.google.com/file/d/1or8uSLqdzCKAC8dRJxrw5NhrRKxNA70z/view?usp=sharing"
     }
-},
-{
-  "name": "PERKINSON’S DISEASE PREDICTION",
-  "desc": "Developed a machine learning model to predict Parkinson’s disease onset using patient data",
-  "image": "PPP",
-  "category": "projects",
-  "links": {
-    "view": "https://khanweb.streamlit.app/",
-    "code": "https://colab.research.google.com/drive/1yrLbMp0OWEDlRJNQWAUOvVs5G-wczywP?usp=sharing"
+  },
+  {
+    "name": "PERKINSON’S DISEASE PREDICTION",
+    "desc": "Developed a machine learning model to predict Parkinson’s disease onset using patient data",
+    "image": "PPP",
+    "category": "projects",
+    "links": {
+      "View": "https://khanweb.streamlit.app/",
+      "Code": "https://colab.research.google.com/drive/1yrLbMp0OWEDlRJNQWAUOvVs5G-wczywP?usp=sharing"
+    }
+  },
+  {
+    "name": "MARKETING CAMPAIGN DASHBOARD",
+    "desc": "Visualized product-level campaign performance in Tableau to uncover top-selling categories and improve targeting.",
+    "image": "marketing",
+    "category": "projects",
+    "links": {
+      "View": "https://public.tableau.com/app/profile/abdikhani.abdulle/viz/shared/DJ27JH4KM",
+      "Code": "https://public.tableau.com/app/profile/abdikhani.abdulle/viz/shared/DJ27JH4KM"
+    }
   }
-},
-{
-  "name": "MARKETING CAMPAIGN DASHBOARD",
-  "desc": "Visualized product-level campaign performance in Tableau to uncover top-selling categories and improve targeting.",
-  "image": "marketing",
-  "category": "projects",
-  "links": {
-    "view": "https://public.tableau.com/app/profile/abdikhani.abdulle/viz/shared/DJ27JH4KM",
-    "code": "https://public.tableau.com/app/profile/abdikhani.abdulle/viz/shared/DJ27JH4KM"
-  }
-}
 ]
-
-
-
-
-
-
-
-
-
