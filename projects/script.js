@@ -29,10 +29,10 @@ document.addEventListener('visibilitychange', function () {
 });
 
 // Fetch projects
-function getProjects() {
-    return fetch("./projects.json")
-        .then(response => response.json())
-        .then(data => data);
+async function getProjects() {
+    const response = await fetch("./projects.json");
+    const data = await response.json();
+    return data;
 }
 
 // Display projects dynamically
@@ -43,27 +43,26 @@ function showProjects(projects) {
     projects.forEach(project => {
         let buttonsHTML = "";
 
-        // Check if links exist to avoid errors
-        if (project.links) {
-            for (let key in project.links) {
-                if (project.links.hasOwnProperty(key)) {
-                    let label = key; 
-                    let url = project.links[key];
+        // Iterate over all keys in project.links (View, Code, Read, etc.)
+        for (let key in project.links) {
+            if (project.links.hasOwnProperty(key)) {
+                let label = key; 
+                let url = project.links[key];
 
-                    // assign icons based on key
-                    let icon = "fas fa-link";
-                    const lowerLabel = label.toLowerCase();
-                    
-                    if (lowerLabel === "view") icon = "fas fa-eye";
-                    if (lowerLabel === "code") icon = "fas fa-code";
-                    if (lowerLabel === "read") icon = "fas fa-file-alt"; // Icon for summary
+                // Data Engineer approach: Map keys to specific icons
+                let icon = "fas fa-link"; // Default icon
+                const lowerLabel = label.toLowerCase();
 
-                    buttonsHTML += `
-                        <a href="${url}" class="btn" target="_blank">
-                            <i class="${icon}"></i> ${label}
-                        </a>
-                    `;
-                }
+                if (lowerLabel === "view") icon = "fas fa-eye";
+                if (lowerLabel === "code") icon = "fas fa-code";
+                if (lowerLabel === "read" || lowerLabel === "product") icon = "fas fa-file-alt";
+
+                // We add a specific class based on the label (e.g., btn-read) for custom styling later
+                buttonsHTML += `
+                    <a href="${url}" class="btn btn-${lowerLabel}" target="_blank">
+                        <i class="${icon}"></i> ${label}
+                    </a>
+                `;
             }
         }
 
@@ -85,10 +84,11 @@ function showProjects(projects) {
     });
 
     projectsContainer.innerHTML = projectsHTML;
-    // ... rest of your Isotope and Tilt code
-}
-// Reinitialize tilt.js
-    VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 20 });
+
+    // Reinitialize tilt.js
+    if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 20 });
+    }
 
     // Reinitialize isotope
     var $grid = $('.box-container').isotope({
@@ -105,15 +105,15 @@ function showProjects(projects) {
 }
 
 // Load projects
-getProjects().then(data => showProjects(data));
+getProjects().then(data => {
+    showProjects(data);
+});
 
-// Disable developer tools
+// Disable developer tools (Keep this if you prefer, though usually not recommended for UX)
 document.onkeydown = function (e) {
-    if (e.keyCode == 123) return false; // F12
+    if (e.keyCode == 123) return false; 
     if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
     if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false;
     if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
 };
-
-
