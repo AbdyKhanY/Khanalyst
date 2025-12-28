@@ -56,8 +56,7 @@ function showProjects(projects) {
           <p>${project.desc}</p>
           <div class="btns">
             <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="${project.links.code}" class="btn" target="_blank">code <i class="fas fa-code"></i></a>
-            <a href="${project.links.read}" class="btn" target="_blank">code <i class="fas fa-file"></i></a>
+            <a href="${project.links.code/read}" class="btn" target="_blank">code <i class="fas fa-code"></i></a>
           </div>
         </div>
       </div>
@@ -137,4 +136,5 @@ document.onkeydown = function (e) {
         return false;
     }
 }
+
 
