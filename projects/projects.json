@@ -19,16 +19,7 @@
     "code": "https://colab.research.google.com/drive/15ZksA_y0wL12ilWBvb0M9XxjrwaL-TS-?usp=sharing"
   }
 },
-{
-  "name": "CYCLIST PROJECT",
-  "desc": "How does a bike-share navigate speedy sucess?",
-  "image": "cyclist",
-  "category": "projects",
-  "links": {
-    "view": "https://docs.google.com/presentation/d/e/2PACX-1vS6ZBzPPYA8PiFFm29nJYcDRRgU60vZ7TNVest3IlTWrx30P_QArsfiqaedc5_hTw/pub?start=true&loop=true&delayms=3000&slide=id.p7",
-    "code": "https://docs.google.com/presentation/d/e/2PACX-1vS6ZBzPPYA8PiFFm29nJYcDRRgU60vZ7TNVest3IlTWrx30P_QArsfiqaedc5_hTw/pub?start=true&loop=true&delayms=3000&slide=id.p7"
-  }
-},
+
 {
   "name": "BREAST CANCER DETECTION",
   "desc": "Developed a machine learning model to predict breast cancer disease onset using patient data",
@@ -70,6 +61,7 @@
   }
 }
 ]
+
 
 
 
