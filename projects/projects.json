@@ -10,16 +10,6 @@
     }
   },
 {
-  "name": "MARKETING CAMPAIGN DASHBOARD",
-  "desc": "Visualized product-level campaign performance in Tableau to uncover top-selling categories and improve targeting.",
-  "image": "marketing",
-  "category": "projects",
-  "links": {
-    "view": "https://public.tableau.com/shared/W929T4YKS?:display_count=n&:origin=viz_share_link",
-    "code": "https://github.com/AbdyKhanY/Portfolio-Projects/blob/00e7341fef6f9c53379b8ca3a3370ff22c892fa3/Marketing%20Project/marketing_analysis.sql"
-  }
-},
-{
     "name": "WORK ORDER TRACKER",
     "desc": "Built a live workflow tracking dashboard to monitor work orders from creation to closure, improving operational visibility.",
     "image": "WorkOrder",
@@ -48,6 +38,16 @@
   "links": {
     "view": "https://colab.research.google.com/drive/1r878RzR4SXtjSTZcUMAjZ3GFmNnTzmlt?usp=sharing",
     "code": "https://colab.research.google.com/drive/1r878RzR4SXtjSTZcUMAjZ3GFmNnTzmlt?usp=sharing"
+  }
+},
+{
+  "name": "MARKETING CAMPAIGN DASHBOARD",
+  "desc": "Visualized product-level campaign performance in Tableau to uncover top-selling categories and improve targeting.",
+  "image": "marketing",
+  "category": "projects",
+  "links": {
+    "view": "https://public.tableau.com/shared/W929T4YKS?:display_count=n&:origin=viz_share_link",
+    "code": "https://github.com/AbdyKhanY/Portfolio-Projects/blob/00e7341fef6f9c53379b8ca3a3370ff22c892fa3/Marketing%20Project/marketing_analysis.sql"
   }
 },
 {
