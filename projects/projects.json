@@ -9,6 +9,16 @@
       "code": "https://drive.google.com/file/d/1eLSs_QYciEa50_7qDQiKbT2-3afxAARq/view?usp=sharing"
     }
   },
+{
+    "name": "GYM TRACKER",
+    "desc": "GymTracker replaces biometric systems with secure QR-based access, requiring only a smartphone and Google Workspace.",
+    "image": "gym",
+    "category": "projects",
+    "links": {
+      "view": "https://drive.google.com/file/d/1eLSs_QYciEa50_7qDQiKbT2-3afxAARq/view?usp=sharing",
+      "code": "https://drive.google.com/file/d/1eLSs_QYciEa50_7qDQiKbT2-3afxAARq/view?usp=sharing"
+    }
+  }, 
  {
   "name": "HEART DISEASE PREDICTION",
   "desc": "Developed a predictive model to assess the likelihood of cardiovascular disease using machine learning techniques",
@@ -61,6 +71,7 @@
   }
 }
 ]
+
 
 
 
