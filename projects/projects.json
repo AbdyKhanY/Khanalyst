@@ -1,6 +1,6 @@
 [
   {
-    "name": "AWS Serverless Stock ETL Pipeline",
+    "name": "AWS Stock ETL Pipeline",
     "desc": "Built a serverless AWS ETL pipeline that ingests real-time stock market API data, transforms it into Parquet format using Lambda, stores it in Amazon S3, and performs SQL analytics in Athena to generate business insights.",
     "image": "gym",
     "category": "projects",
