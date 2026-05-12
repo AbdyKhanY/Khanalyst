@@ -1,5 +1,15 @@
 [
   {
+    "name": "AWS Serverless Stock ETL Pipeline",
+    "desc": "Built a serverless AWS ETL pipeline that ingests real-time stock market API data, transforms it into Parquet format using Lambda, stores it in Amazon S3, and performs SQL analytics in Athena to generate business insights.",
+    "image": "gym",
+    "category": "projects",
+    "links": {
+      "view": "https://drive.google.com/file/d/1eLSs_QYciEa50_7qDQiKbT2-3afxAARq/view?usp=sharing",
+      "code": "https://github.com/AbdyKhanY/Portfolio-Projects/tree/5d82c4dd37c97dc80093c2affde2c7b1cabf1787/GYM-TRACKER"
+    }
+  },
+  {
     "name": "GYM TRACKER",
     "desc": "GymTracker replaces biometric systems with secure QR-based access, requiring only a smartphone and Google Workspace.",
     "image": "gym",
