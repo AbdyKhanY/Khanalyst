@@ -1,5 +1,15 @@
 [
   {
+    "name": "Supply Chain & Logistics Analytics Dashboard",
+    "desc": "An interactive Power BI dashboard for analyzing supplier performance, inventory, shipments, customer profitability, and key business KPIs to support data-driven supply chain decisions.",
+    "image": "supply_chain",
+    "category": "projects",
+    "links": {
+      "view": "https://github.com/AbdyKhanY/Portfolio-Projects/tree/main/SAMSUNG%20SUPPLY%20CHAIN%20PROJECT",
+      "code": "https://github.com/AbdyKhanY/Portfolio-Projects/tree/main/SAMSUNG%20SUPPLY%20CHAIN%20PROJECT"
+    }
+  },
+  {
     "name": "AWS Stock ETL Pipeline",
     "desc": "Serverless AWS ETL pipeline for ingesting, transforming, and analyzing stock market data using Lambda, S3, and Athena",
     "image": "stock",
