@@ -1,7 +1,7 @@
 [
   {
     "name": "Supply Chain & Logistics Analytics Dashboard",
-    "desc": "An interactive Power BI dashboard for analyzing supplier performance, inventory, shipments, customer profitability, and key business KPIs to support data-driven supply chain decisions.",
+    "desc": "Visualized supply chain performance in Power BI to analyze suppliers, inventory, shipments, and business KPIs.",
     "image": "supply_chain",
     "category": "projects",
     "links": {
