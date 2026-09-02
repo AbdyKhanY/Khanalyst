@@ -1,4 +1,14 @@
 [
+ {
+    "name": "Financial Performance ",
+    "desc": "Analyzed financial performance in Power BI across revenue, risk, compliance, and IoT metrics to uncover key business KPIs and risk patterns.",
+    "image": "financial_performance",
+    "category": "projects",
+    "links": {
+      "view": "https://github.com/AbdyKhanY/Portfolio-Projects/tree/554a9bc0c83d703f72f07c0f95edee9787dd4b97/FINANCIAL%20MNGMNT%20ANALYSIS",
+      "code": "https://github.com/AbdyKhanY/Portfolio-Projects/tree/554a9bc0c83d703f72f07c0f95edee9787dd4b97/FINANCIAL%20MNGMNT%20ANALYSIS"
+    }
+  },
  
   {
     "name": "AWS Stock ETL Pipeline",
@@ -10,16 +20,7 @@
       "code": "https://github.com/AbdyKhanY/Portfolio-Projects/tree/51950ddad47feb48f682d6255f8c373cf7337304/Stock%20Data%20Project"
     }
   },
-   {
-    "name": "Financial Performance ",
-    "desc": "Analyzed financial performance in Power BI across revenue, risk, compliance, and IoT metrics to uncover key business KPIs and risk patterns.",
-    "image": "financial_performance",
-    "category": "projects",
-    "links": {
-      "view": "https://github.com/AbdyKhanY/Portfolio-Projects/tree/554a9bc0c83d703f72f07c0f95edee9787dd4b97/FINANCIAL%20MNGMNT%20ANALYSIS",
-      "code": "https://github.com/AbdyKhanY/Portfolio-Projects/tree/554a9bc0c83d703f72f07c0f95edee9787dd4b97/FINANCIAL%20MNGMNT%20ANALYSIS"
-    }
-  },
+   
    {
     "name": "Supply Chain & Logistics ",
     "desc": "Visualized supply chain performance in Power BI to analyze suppliers, inventory, shipments, and business KPIs.",
@@ -81,16 +82,7 @@
     "code": "https://github.com/AbdyKhanY/Portfolio-Projects/tree/14a18aca26d37f1a160bbe35aae947bc681a1066/Marketing%20Project"
   }
 },
-{
-    "name": "UNBILLED WORKORDER ",
-    "desc": "Built a Power BI dashboard to track unbilled work orders, recovering $100K+ in missed revenue across teams and sites.",
-    "image": "Cert",
-    "category": "projects",
-    "links": {
-      "view": "https://drive.google.com/file/d/1or8uSLqdzCKAC8dRJxrw5NhrRKxNA70z/view?usp=sharing",
-      "code": "https://drive.google.com/file/d/1or8uSLqdzCKAC8dRJxrw5NhrRKxNA70z/view?usp=sharing"
-    }
-},
+
 {
   "name": "PERKINSON’S DISEASE PREDICTION",
   "desc": "Developed a machine learning model to predict Parkinson’s disease onset using patient data",
